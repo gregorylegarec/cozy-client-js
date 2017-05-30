@@ -85,6 +85,7 @@ const filesProto = {
 
 const intentsProto = {
   create: intents.create,
+  start: intents.start,
   createService: intents.createService
 }
 

@@ -106,6 +106,12 @@ function listenClientData (intent, window) {
   })
 }
 
+// shorthand for cozy.intents.create().start()
+export function start (cozy, action, doctype, element, data = {}, permissions = {}) {
+  return cozy.intents.create(action, doctype, data, permissions)
+    .start(element)
+}
+
 // returns a service to communicate with intent client
 export function createService (cozy, intentId, serviceWindow) {
   serviceWindow = serviceWindow || typeof window !== 'undefined' && window
